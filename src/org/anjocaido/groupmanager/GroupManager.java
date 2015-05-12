@@ -538,6 +538,7 @@ public class GroupManager extends JavaPlugin {
 				auxUser.setGroup(auxGroup);
 				if (!sender.hasPermission("groupmanager.notify.other") || (isConsole))
 					sender.sendMessage(ChatColor.YELLOW + "You changed player '" + auxUser.getName() + "' group to '" + auxGroup.getName() + "' in world '" + dataHolder.getName() + "'.");
+					Bukkit.broadcastMessage(ChatColor.RED + "[CarbonCube]" + auxUser.getName() + " has been promoted to the group " + auxGroup.getName() "!");
 
 				return true;
 
